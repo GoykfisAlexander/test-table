@@ -1,39 +1,89 @@
-.App {
-  text-align: center;
+input,
+select,
+.drop-down-button {
+  border-radius: 5px;
+  border: 1px solid #dadada;
+  height: 39px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type="text"] {
+  width: 80%;
+  border: none;
+}
+input:focus,
+select:focus {
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.search-button {
+  border: none;
+  background: none;
 }
-
-.App-header {
-  min-height: 100vh;
+.table-hover tbody tr:hover,
+.dropdown-item:hover {
+  background-color: rgba(255, 210, 0, 0.1);
+}
+.drop-down-button {
+  position: relative;
+}
+.drop-down-list {
+  margin-top: 43px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.dropdown-item,
+.drop-down-button {
+  width: 164px;
+  height: 39px;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
+  padding: 9px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.column {
+  background: #eee;
+  height: 60px;
+}
+.column * {
+  font-weight: 500;
+  color: #2b323b;
+}
+tr * {
+  padding: 19px;
+}
+.button {
+  width: 28px;
+  height: 28px;
+  background-color: #fff;
+  border: none;
+  border-radius: 100%;
+}
+.active {
+  background-color: rgba(255, 210, 0, 0.2);
+}
+.no-active {
+  color: #acacac;
+}
+.search-label {
+  width: 30%;
+  border: 1px solid #dadada;
+  justify-content: space-evenly;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.focused,
+input[type="date"]:focus {
+  border-color: #ffd200;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
+@media (max-width: 1440px) {
+  .filter-bar {
+    flex-direction: column;
   }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
+  .search-label {
+    width: 100%;
   }
 }
