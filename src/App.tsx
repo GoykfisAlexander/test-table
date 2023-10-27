@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Table from "./components/table";
-import Pagination from "./components/pagination";
+import Pagination from "./components/table/pagination";
 import Header from "./components/header";
 
 function App() {

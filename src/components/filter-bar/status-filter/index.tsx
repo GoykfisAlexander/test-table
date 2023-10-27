@@ -13,7 +13,10 @@ const StatusFilter: React.FC = () => {
   const handleStatusFilterChange = (value: string) => {
     dispatch(setFilter(value));
     dispatch(setPage(1));
-    setTimeout(() => setShowModal(false));
+    closeStatusFilter();
+  };
+  const closeStatusFilter = () => {
+    setTimeout(() => setShowModal(false), 0);
   };
 
   const statusMap: Record<string, string> = {
@@ -25,6 +28,10 @@ const StatusFilter: React.FC = () => {
 
   return (
     <>
+      {showModal && (
+        <div onClick={closeStatusFilter} className={styles.mask}></div>
+      )}
+
       <div
         className={`${styles.status_filter} ${showModal ? styles.focused : ""}`}
         id="dropdown-container"
@@ -33,11 +40,13 @@ const StatusFilter: React.FC = () => {
         }}
       >
         <span>{statusMap[statusFilter]}</span>
+
         {showModal ? <RectangleUpIcon /> : <RectangleDownIcon />}
         {showModal && (
           <div className={styles.drop_down_list}>
             {["all", "active", "canceled", "completed"].map((status) => (
               <div
+                className={statusFilter === status ? styles.active : ""}
                 key={status}
                 onClick={() => handleStatusFilterChange(status)}
               >

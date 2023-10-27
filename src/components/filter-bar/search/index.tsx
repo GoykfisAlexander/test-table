@@ -17,13 +17,13 @@ const Search: React.FC = () => {
 
   const handleInputFocus = () => {
     if (labelRef.current) {
-      labelRef.current.style.borderColor = "#ffd200";
+      labelRef.current.classList.add(styles.focused);
     }
   };
 
   const handleInputBlur = () => {
     if (labelRef.current) {
-      labelRef.current.style.borderColor = "#dadada";
+      labelRef.current.classList.remove(styles.focused);
     }
   };
 

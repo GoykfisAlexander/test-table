@@ -27,6 +27,16 @@
 .focused {
   border-color: #ffd200;
 }
-.drop_down_list *:hover {
+.active {
   background-color: rgba(255, 210, 0, 0.1);
+}
+.drop_down_list *:hover {
+  background-color: rgba(255, 210, 0, 0.05);
+}
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
 }

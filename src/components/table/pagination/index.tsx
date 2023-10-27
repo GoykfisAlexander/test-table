@@ -1,7 +1,7 @@
 import styles from "./index.module.css";
 import React from "react";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { setPage } from "../../app/slices/tableSlice";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
+import { setPage } from "../../../app/slices/tableSlice";
 
 const Pagination: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -46,7 +46,7 @@ const Pagination: React.FC = () => {
     ];
     return currentPage + conditions.indexOf(true) - 1;
   };
-  const pagesSlice =
+  const pagesArraySlice =
     totalPages < 5
       ? pages
       : [
@@ -69,7 +69,7 @@ const Pagination: React.FC = () => {
           >
             {"<"}
           </button>
-          {pagesSlice.map((page, index) =>
+          {pagesArraySlice.map((page, index) =>
             page ? (
               <button
                 className={`${styles.button} ${
