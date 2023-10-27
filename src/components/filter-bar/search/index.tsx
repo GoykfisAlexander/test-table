@@ -1,7 +1,8 @@
+import styles from "./index.module.css";
 import React, { useRef } from "react";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { setPage, setSearch } from "../../app/tableSlice";
-import SearchIcon from "./SearchIcon";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
+import { setPage, setSearch } from "../../../app/slices/tableSlice";
+import SearchIcon from "../../ui/icons/SearchIcon";
 
 const Search: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -16,18 +17,18 @@ const Search: React.FC = () => {
 
   const handleInputFocus = () => {
     if (labelRef.current) {
-      labelRef.current.classList.add("focused");
+      labelRef.current.style.borderColor = "#ffd200";
     }
   };
 
   const handleInputBlur = () => {
     if (labelRef.current) {
-      labelRef.current.classList.remove("focused");
+      labelRef.current.style.borderColor = "#dadada";
     }
   };
 
   return (
-    <label ref={labelRef} className="d-flex rounded-pill  search-label">
+    <label ref={labelRef} className={styles.label}>
       <input
         type="text"
         value={search}
@@ -35,8 +36,9 @@ const Search: React.FC = () => {
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
         placeholder="Поиск"
+        className={styles.input}
       />
-      <button className="search-button">
+      <button className={styles.button}>
         <SearchIcon />
       </button>
     </label>

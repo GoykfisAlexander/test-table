@@ -1,0 +1,19 @@
+.row {
+  font-weight: 400;
+  height: 4.48em;
+  border: 1px solid #dadada;
+  border-left: none;
+  border-right: none;
+}
+.row:hover {
+  background-color: rgba(255, 210, 0, 0.1);
+}
+.row * {
+  padding: 0 1.4em 0 1.4em;
+}
+.description {
+  display: flex;
+  height: 4.4em;
+  align-items: flex-start;
+  overflow: scroll;
+}

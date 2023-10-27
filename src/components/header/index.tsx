@@ -1,7 +1,7 @@
 import React from "react";
-import FilterBar from "./FilterBar";
+import FilterBar from "../filter-bar";
 
-const TableHeader: React.FC = () => {
+const Header: React.FC = () => {
   return (
     <div>
       <div className="mx-3">
@@ -18,4 +18,4 @@ const TableHeader: React.FC = () => {
     </div>
   );
 };
-export default TableHeader;
+export default Header;

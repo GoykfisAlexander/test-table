@@ -7,7 +7,7 @@ export interface TableItem {
   executionDate: string;
   status: string;
 }
-export const mockData: TableItem[] = Array(10)
+export const mockData: TableItem[] = Array(42)
   .fill([
     {
       id: 1,

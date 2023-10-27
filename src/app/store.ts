@@ -1,5 +1,5 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
-import tableReducer from "./tableSlice";
+import tableReducer from "./slices/tableSlice";
 
 export const store = configureStore({
   reducer: {

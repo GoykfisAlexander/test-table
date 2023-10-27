@@ -1,0 +1,17 @@
+.pagination {
+  font-size: 14em;
+  margin: 3em auto 0;
+}
+.button {
+  width: 28px;
+  height: 28px;
+  background-color: #fff;
+  border: none;
+  border-radius: 100%;
+}
+.active {
+  background-color: rgba(255, 210, 0, 0.2);
+}
+.no_active {
+  color: #acacac;
+}

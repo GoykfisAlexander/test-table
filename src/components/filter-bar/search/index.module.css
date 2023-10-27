@@ -1,0 +1,19 @@
+.label {
+  display: flex;
+  width: 30%;
+  height: 2.5em;
+  border: 1px solid #dadada;
+  justify-content: space-evenly;
+  border-radius: 50rem;
+}
+
+.input {
+  border-radius: 50rem;
+  width: 70%;
+  border: none;
+  outline: none;
+}
+.button {
+  border: none;
+  background: none;
+}

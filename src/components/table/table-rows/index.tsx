@@ -1,31 +1,17 @@
+import styles from "./index.module.css";
 import React from "react";
-import { useAppSelector } from "../../app/hooks";
+import { useAppSelector } from "../../../app/hooks";
 
 //   Данные таблицы
 const TableRows: React.FC = () => {
   const tableData = useAppSelector((state) => state.table.data);
   return (
     <tbody>
-      {tableData.map((item) => (
-        <tr
-          className=" border  font-weight-normal "
-          style={{
-            height: "60px",
-          }}
-          key={item.id + Math.random()}
-        >
+      {tableData.map((item, index) => (
+        <tr className={styles.row} key={"row" + index}>
           <td>{item.title}</td>
           <td
-            style={
-              item.description.length > 200
-                ? {
-                    display: "flex",
-                    height: "60px",
-                    alignItems: "start",
-                    overflow: "scroll",
-                  }
-                : {}
-            }
+            className={item.description.length > 200 ? styles.description : ""}
           >
             {item.description.length > 1000
               ? `${item.description.substring(0, 1000)}...`

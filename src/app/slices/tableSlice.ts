@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AppThunk } from "./store";
-import { mockData, TableItem } from "../data";
+import { AppThunk } from "../store";
+import { mockData, TableItem } from "../../data";
 
 interface TableState {
   data: TableItem[];
@@ -10,6 +10,7 @@ interface TableState {
   statusFilter: string;
   startDate: string;
   endDate: string;
+  itemsPerPage: number;
 }
 
 const initialState: TableState = {
@@ -20,6 +21,7 @@ const initialState: TableState = {
   statusFilter: "all",
   startDate: "",
   endDate: "",
+  itemsPerPage: 11,
 };
 
 const tableSlice = createSlice({
@@ -65,11 +67,11 @@ export const fetchTableData =
     search: string,
     statusFilter: string,
     startDate: string,
-    endDate: string
+    endDate: string,
+    itemsPerPage: number
   ): AppThunk =>
   async (dispatch) => {
     try {
-      const itemsPerPage = 8;
       const startIndex = (page - 1) * itemsPerPage;
       const filterMockData = mockData.filter((item) => {
         // Условие для фильтрации по поиску

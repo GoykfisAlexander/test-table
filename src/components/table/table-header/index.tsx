@@ -1,11 +1,12 @@
+import styles from "./index.module.css";
 import React from "react";
 //  Заголовки столбцов
-const TableColumn: React.FC = () => {
+const TableHeader: React.FC = () => {
   return (
-    <thead className="column">
+    <thead className={styles.thead}>
       <tr>
         <th>Название</th>
-        <th style={{ width: "35%" }}>Описание</th>
+        <th className={styles.description}>Описание</th>
         <th>Пользователь</th>
         <th>Дата создания</th>
         <th>Дата исполнения</th>
@@ -14,4 +15,4 @@ const TableColumn: React.FC = () => {
     </thead>
   );
 };
-export default TableColumn;
+export default TableHeader;

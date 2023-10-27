@@ -1,89 +1,12 @@
-input,
-select,
-.drop-down-button {
-  border-radius: 5px;
-  border: 1px solid #dadada;
-  height: 39px;
-}
-
-input[type="text"] {
-  width: 80%;
-  border: none;
-}
-input:focus,
-select:focus {
-  outline: none;
-}
-
-.search-button {
-  border: none;
-  background: none;
-}
-.table-hover tbody tr:hover,
-.dropdown-item:hover {
-  background-color: rgba(255, 210, 0, 0.1);
-}
-.drop-down-button {
-  position: relative;
-}
-.drop-down-list {
-  margin-top: 43px;
-  background-color: #fff;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-.dropdown-item,
-.drop-down-button {
-  width: 164px;
-  height: 39px;
-  cursor: pointer;
+.section {
   display: flex;
-  padding: 9px;
-  align-items: center;
+  flex-direction: column;
+  width: 83%;
+  margin: 40px auto 0;
 }
-.column {
-  background: #eee;
-  height: 60px;
-}
-.column * {
-  font-weight: 500;
-  color: #2b323b;
-}
-tr * {
-  padding: 19px;
-}
-.button {
-  width: 28px;
-  height: 28px;
-  background-color: #fff;
-  border: none;
-  border-radius: 100%;
-}
-.active {
-  background-color: rgba(255, 210, 0, 0.2);
-}
-.no-active {
-  color: #acacac;
-}
-.search-label {
-  width: 30%;
-  border: 1px solid #dadada;
-  justify-content: space-evenly;
-}
-
-.focused,
-input[type="date"]:focus {
-  border-color: #ffd200;
-}
-
-@media (max-width: 1440px) {
-  .filter-bar {
-    flex-direction: column;
-  }
-  .search-label {
-    width: 100%;
+@media (max-width: 1040px) {
+  .section {
+    width: 90%;
+    font-size: 0.6em;
   }
 }

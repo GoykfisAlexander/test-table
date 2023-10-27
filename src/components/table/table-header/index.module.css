@@ -1,0 +1,12 @@
+.thead {
+  background: #eee;
+  height: 3.6em;
+}
+.thead * * {
+  padding: 0 1.4em 0 1.4em;
+  font-weight: 300;
+  color: #2b323b;
+}
+.description {
+  width: 35%;
+}

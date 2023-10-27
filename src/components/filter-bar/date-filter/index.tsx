@@ -1,6 +1,11 @@
+import styles from "./index.module.css";
 import React from "react";
-import { setEndDate, setPage, setStartDate } from "../../app/tableSlice";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import {
+  setEndDate,
+  setPage,
+  setStartDate,
+} from "../../../app/slices/tableSlice";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 //  Фильтр по дате
 const DateFilter: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -22,24 +27,22 @@ const DateFilter: React.FC = () => {
       <label htmlFor="startDate">
         с
         <input
-          className="mx-2"
+          className={`${styles.input} ${startDate ? "" : styles.no_value}`}
           id="startDate"
           type="date"
           value={startDate}
           onChange={handleStartDateChange}
-          placeholder="Начальная дата"
         />
       </label>
 
       <label htmlFor="endDate">
         по
         <input
-          className="mx-2"
+          className={`${styles.input} ${endDate ? "" : styles.no_value}`}
           id="endDate"
           type="date"
           value={endDate}
           onChange={handleEndDateChange}
-          placeholder=""
         />
       </label>
     </div>

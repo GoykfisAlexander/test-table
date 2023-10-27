@@ -1,0 +1,32 @@
+.status_filter {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.status_filter,
+.drop_down_list {
+  border-radius: 5px;
+  border: 1px solid #dadada;
+}
+.drop_down_list {
+  margin-top: 3em;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.drop_down_list *,
+.status_filter {
+  height: 2.5em;
+  cursor: pointer;
+  width: 10em;
+  padding: 9px;
+  align-items: center;
+}
+.focused {
+  border-color: #ffd200;
+}
+.drop_down_list *:hover {
+  background-color: rgba(255, 210, 0, 0.1);
+}
