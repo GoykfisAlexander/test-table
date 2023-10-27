@@ -3,6 +3,7 @@ import { fetchTableData } from "../../app/slices/tableSlice";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import TableRows from "./table-rows";
 import TableHeader from "./table-header";
+import Pagination from "./pagination";
 
 const Table: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -35,15 +36,18 @@ const Table: React.FC = () => {
   ]);
 
   return (
-    <div
-      className="border mt-3 mx-3"
-      style={{ height: "53em", fontSize: "14em" }}
-    >
-      <table style={{ width: "100%" }}>
-        <TableHeader />
-        <TableRows />
-      </table>
-    </div>
+    <>
+      <div
+        className="border mt-3 mx-3"
+        style={{ height: "53em", fontSize: "14em" }}
+      >
+        <table style={{ width: "100%" }}>
+          <TableHeader />
+          <TableRows />
+        </table>
+      </div>
+      <Pagination />
+    </>
   );
 };
 
