@@ -4,3 +4,9 @@
   margin: 8px 0 8px 0;
   font-size: 16em;
 }
+@media (orientation: portrait) {
+  .filter_bar {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

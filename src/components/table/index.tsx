@@ -39,7 +39,7 @@ const Table: React.FC = () => {
     <>
       <div
         className="border mt-3 mx-3"
-        style={{ height: "53em", fontSize: "14em" }}
+        style={{ height: "53em", fontSize: "14em", overflow: "scroll" }}
       >
         <table style={{ width: "100%" }}>
           <TableHeader />

@@ -21,7 +21,7 @@ const initialState: TableState = {
   statusFilter: "all",
   startDate: "",
   endDate: "",
-  itemsPerPage: 11,
+  itemsPerPage: 20,
 };
 
 const tableSlice = createSlice({

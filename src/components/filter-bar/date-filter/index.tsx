@@ -23,7 +23,7 @@ const DateFilter: React.FC = () => {
   };
 
   return (
-    <div className="d-flex ">
+    <div className={styles.container}>
       <label htmlFor="startDate">
         с
         <input

@@ -11,9 +11,17 @@
 .row * {
   padding: 0 1.4em 0 1.4em;
 }
-.description {
+.longDescription {
   display: flex;
   height: 4.4em;
   align-items: flex-start;
   overflow: scroll;
+}
+.shortDescription {
+  color: #000;
+}
+@media (orientation: portrait) {
+  .description {
+    width: 75vw;
+  }
 }

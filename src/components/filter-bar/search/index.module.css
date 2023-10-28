@@ -10,7 +10,10 @@
 .focused {
   border-color: #ffd200;
 }
-
+.label:hover *,
+.focused * {
+  fill: #ffd200;
+}
 .input {
   border-radius: 50rem;
   width: 70%;
@@ -20,4 +23,10 @@
 .button {
   border: none;
   background: none;
+}
+@media (orientation: portrait) {
+  .label {
+    width: 75%;
+    margin: auto;
+  }
 }

@@ -40,3 +40,9 @@
   width: 100vw;
   height: 100vh;
 }
+@media (orientation: portrait) {
+  .status_filter {
+    /* width: 40%; */
+    margin: auto;
+  }
+}

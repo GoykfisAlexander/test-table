@@ -14,3 +14,13 @@
 .no_value {
   color: white;
 }
+.container {
+  display: flex;
+}
+@media (orientation: portrait) {
+  .container {
+    width: 75%;
+    margin: auto;
+    justify-content: space-around;
+  }
+}
